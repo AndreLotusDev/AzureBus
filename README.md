@@ -1,5 +1,9 @@
 # BlazorRegisterNames
 
+<h2>The package Windows.Azure.Bus is deprecated, u can use the Azure.Bus instead, will have a simillar workflow</h2>
+
+<hr/>
+
 We have 3 projects:
 - BlazorRegisterNames (In Blazor Server Side)
 - BusShared (the common part between the publisher and consumer)

@@ -1,0 +1,33 @@
+﻿@page "/"
+@using BusShared.Interface
+@using BusShared.Models
+@inject IQueueService queue
+
+<EditForm Model="@person" OnValidSubmit="@PublishMessage">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <hr />
+    <label for="firstName"></label>
+    <InputText id="firstName" @bind-Value="person.FirstName" />
+
+    <label for="lastName"></label>
+    <InputText id="lastName" @bind-Value="person.LastName" />
+    <hr />
+
+    <button type="submit">Submit</button>
+</EditForm>
+
+@code{
+    private PersonModel person = new();
+
+    private async Task PublishMessage()
+    {
+        if (person.FirstName == "" && person.LastName == "")
+            return;
+
+        await queue.SendMessageAsync(person, "personstoregister");
+        person = new PersonModel();
+    }
+
+}

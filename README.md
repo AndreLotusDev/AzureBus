@@ -1,6 +1,6 @@
 # BlazorRegisterNames
 
-<h2>The package Windows.Azure.Bus is deprecated, u can use the Azure.Bus instead, will have a simillar workflow</h2>
+<h2>The package Windows.Azure.Bus is deprecated, u should use the Azure.Bus instead, probably will have a simillar workflow</h2>
 
 <hr/>
 

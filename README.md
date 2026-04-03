@@ -74,7 +74,7 @@ Both applications must point to the same Service Bus namespace and queue.
 
 ### Blazor application
 
-Update `/home/runner/work/AzureBus/AzureBus/BlazorRegisterNames/appsettings.json`:
+From the repository root, update `BlazorRegisterNames/appsettings.json`:
 
 ```json
 "ConnectionStrings": {
@@ -86,7 +86,7 @@ The UI publishes messages to the queue named `personstoregister`.
 
 ### Console consumer
 
-Update `/home/runner/work/AzureBus/AzureBus/ConsumeNames/Program.cs`:
+From the repository root, update `ConsumeNames/Program.cs`:
 
 - `connectionString`: your Azure Service Bus connection string
 - `queueName`: the same queue used by the Blazor app, such as `personstoregister`
@@ -101,7 +101,7 @@ Update `/home/runner/work/AzureBus/AzureBus/ConsumeNames/Program.cs`:
 Run the web project:
 
 ```bash
-dotnet run --project /home/runner/work/AzureBus/AzureBus/BlazorRegisterNames/BlazorRegisterNames.csproj
+dotnet run --project BlazorRegisterNames/BlazorRegisterNames.csproj
 ```
 
 ### Start the consumer
@@ -109,7 +109,7 @@ dotnet run --project /home/runner/work/AzureBus/AzureBus/BlazorRegisterNames/Bla
 Run the console project in another terminal:
 
 ```bash
-dotnet run --project /home/runner/work/AzureBus/AzureBus/ConsumeNames/ConsumeNames.csproj
+dotnet run --project ConsumeNames/ConsumeNames.csproj
 ```
 
 ### Test the flow
@@ -120,6 +120,6 @@ dotnet run --project /home/runner/work/AzureBus/AzureBus/ConsumeNames/ConsumeNam
 
 ## Relevant implementation files
 
-- `/home/runner/work/AzureBus/AzureBus/BlazorRegisterNames/Pages/Index.razor`
-- `/home/runner/work/AzureBus/AzureBus/BusShared/Service/QuerService.cs`
-- `/home/runner/work/AzureBus/AzureBus/ConsumeNames/Program.cs`
+- `BlazorRegisterNames/Pages/Index.razor`
+- `BusShared/Service/QuerService.cs`
+- `ConsumeNames/Program.cs`

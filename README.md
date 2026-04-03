@@ -121,5 +121,5 @@ dotnet run --project ConsumeNames/ConsumeNames.csproj
 ## Relevant implementation files
 
 - `BlazorRegisterNames/Pages/Index.razor`
-- `BusShared/Service/QuerService.cs`
+- `QueueService` implementation in `BusShared/Service/QuerService.cs`
 - `ConsumeNames/Program.cs`
